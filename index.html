@@ -7,14 +7,12 @@
     
 </head>
 <body>
+    <button>Click Me</button>
     <script>
-        console.log("Hello World");
-        alert("Hello World");
-
-        document.body.style.backgroundColor = "lightblue";
-
-
-
+       const button = document.querySelector("button");
+       button.addEventListener("click", function() {
+            alert("Button clicked!");
+        });
     </script>
     
 </body>
