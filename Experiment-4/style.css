@@ -1,0 +1,79 @@
+/* BEGINNER FRIENDLY CSS */
+
+/* Page background */
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields */
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+}
+
+/* Buttons */
+button {
+    background-color: #667eea;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #5568d3;
+}
+
+/* Result box */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #667eea;
+}
+
+/* Result text */
+.result-item {
+    margin: 8px 0;
+}
+
+/* Pass color */
+.pass {
+    color: green;
+    font-weight: bold;
+}
+
+/* Fail color */
+.fail {
+    color: red;
+    font-weight: bold;
+}
