@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { background-color: #f5f5f5; }
+        nav { background-color: #007bff !important; }
+        .card { box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .card img { height: 200px; object-fit: cover; }
+        .price { color: #007bff; font-weight: bold; font-size: 1.3rem; }
+        footer { background-color: #333; color: white; padding: 20px; }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">TechStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PRODUCTS SECTION -->
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-5">Featured Products</h2>
+    <div class="row">
+        <!-- CARD 1 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="shopping.webp" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                    <p class="card-text">High performance laptop</p>
+                    <span class="badge bg-success">New</span>
+                    <p class="price mt-2">$800</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="setProductDetails('Laptop', '$800', 'High performance laptop with latest specifications')">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="phne 2.webp" class="card-img-top" alt="Smartphone">
+                <div class="card-body">
+                    <h5 class="card-title">Smartphone</h5>
+                    <p class="card-text">Latest smartphone</p>
+                    <span class="badge bg-danger">Sale</span>
+                    <p class="price mt-2">$500</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="setProductDetails('Smartphone', '$500', 'Latest smartphone with advanced camera system')">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="head 1.webp" class="card-img-top" alt="Headphones">
+                <div class="card-body">
+                    <h5 class="card-title">Headphones</h5>
+                    <p class="card-text">Noise cancelling</p>
+                    <span class="badge bg-warning text-dark">New</span>
+                    <p class="price mt-2">$150</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#detailsModal" onclick="setProductDetails('Headphones', '$150', 'Premium noise cancelling headphones with great sound quality')">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL WINDOW -->
+<div class="modal fade" id="detailsModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6 id="modalProductName"></h6>
+                <p id="modalDescription"></p>
+                <p><strong>Price: </strong><span id="modalPrice"></span></p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Premium Quality</li>
+                    <li>Warranty Included</li>
+                    <li>Free Shipping</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-5">
+    <div class="container">
+        <p>&copy; 2026 TechStore - All Rights Reserved</p>
+        <div>
+            <i class="fab fa-facebook mx-2"></i>
+            <i class="fab fa-twitter mx-2"></i>
+            <i class="fab fa-instagram mx-2"></i>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function setProductDetails(name, price, description) {
+        document.getElementById('modalProductName').textContent = name;
+        document.getElementById('modalPrice').textContent = price;
+        document.getElementById('modalDescription').textContent = description;
+        document.getElementById('modalTitle').textContent = name + ' - Details';
+    }
+</script>
+</body>
+</html>
