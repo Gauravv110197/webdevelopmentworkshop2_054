@@ -40,7 +40,7 @@ function resetPage() {
 
 // Attach functions to buttons
 document.getElementById("changeTextBtn").onclick = changeText;
-document.getElementById("bgColorBtn").onclick = changeColor;
+document.getElementById("bgColorBtn").addEventListener("click", changeColor);
 document.getElementById("fontSizeBtn").onclick = increaseFontSize;
 document.getElementById("toggleBtn").onclick = toggleParagraph;
 document.getElementById("resetBtn").onclick = resetPage;
