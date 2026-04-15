@@ -1,43 +1,46 @@
-let heading = document.getElementById("mainHeading");
-let paragraph = document.getElementById("paragraph");
-let input = document.getElementById("userInput");
-
-let fontSize = 16;
-
 // Change heading text
-document.getElementById("changeTextBtn").addEventListener("click", function () {
-    if (input.value !== "") {
-        heading.innerHTML = input.value;
-    }
-});
+function changeText() {
+    let input = document.getElementById("userInput").value;
+    let heading = document.getElementById("mainHeading");
+    heading.innerHTML = input;
+}
 
 // Change background color
-document.getElementById("bgColorBtn").onclick = function () {
-    document.body.style.backgroundColor =
-        "#" + Math.floor(Math.random() * 16777215).toString(16);
-};
+function changeColor() {
+    let colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+}
 
 // Increase font size
-document.getElementById("fontSizeBtn").addEventListener("click", function () {
-    fontSize += 2;
-    paragraph.style.fontSize = fontSize + "px";
-});
+function increaseFontSize() {
+    let paragraph = document.getElementById("paragraph");
+    let currentSize = parseInt(paragraph.style.fontSize) || 16;
+    paragraph.style.fontSize = (currentSize + 2) + "px";
+}
 
 // Show/Hide paragraph
-document.getElementById("toggleBtn").addEventListener("click", function () {
+function toggleParagraph() {
+    let paragraph = document.getElementById("paragraph");
     if (paragraph.style.display === "none") {
         paragraph.style.display = "block";
     } else {
         paragraph.style.display = "none";
     }
-});
+}
 
 // Reset page
-document.getElementById("resetBtn").addEventListener("click", function () {
-    heading.innerHTML = "Welcome to JavaScript Lab";
-    paragraph.style.display = "block";
-    paragraph.style.fontSize = "16px";
+function resetPage() {
+    document.getElementById("mainHeading").innerHTML = "Welcome to JavaScript Lab";
+    document.getElementById("paragraph").style.display = "block";
+    document.getElementById("paragraph").style.fontSize = "16px";
     document.body.style.backgroundColor = "#f4f4f4";
-    input.value = "";
-    fontSize = 16;
-});
+    document.getElementById("userInput").value = "";
+}
+
+// Attach functions to buttons
+document.getElementById("changeTextBtn").onclick = changeText;
+document.getElementById("bgColorBtn").onclick = changeColor;
+document.getElementById("fontSizeBtn").onclick = increaseFontSize;
+document.getElementById("toggleBtn").onclick = toggleParagraph;
+document.getElementById("resetBtn").onclick = resetPage;
