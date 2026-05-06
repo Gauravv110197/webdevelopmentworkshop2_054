@@ -1,12 +1,10 @@
-function App() {
+function StudentCard(name, rollNo,city) {
     return (
         <div>
-            <h1>
-                Student list
-            </h1>
-            <Student />
-             <Student />
-              <Student />
+            <h2>Name: {name}</h2>
+            <p>RollNo: {rollNo}</p>
+            <p>City: {city}</p>
+
         </div>
     )
 }
