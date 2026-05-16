@@ -1,0 +1,14 @@
+{
+  "name": "react-workspace",
+  "private": true,
+  "scripts": {
+    "dev:8": "cd Experiment-8/vite-project && npm run dev",
+    "dev:9": "cd Experiment-9/vite-project && npm run dev",
+    "build:8": "cd Experiment-8/vite-project && npm run build",
+    "build:9": "cd Experiment-9/vite-project && npm run build",
+    "lint:8": "cd Experiment-8/vite-project && npm run lint",
+    "lint:9": "cd Experiment-9/vite-project && npm run lint",
+    "preview:8": "cd Experiment-8/vite-project && npm run preview",
+    "preview:9": "cd Experiment-9/vite-project && npm run preview"
+  }
+}
