@@ -1,3 +1,0 @@
-function Studentcard(name,rollno) {
-    
-}
