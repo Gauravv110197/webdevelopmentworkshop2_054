@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Even Numbers</title>
+</head>
+<body>
+
+    <h2>Sum of Even Numbers from 1 to N</h2>
+
+    <label>Enter a Number (N): </label>
+    <input type="number" id="num">
+    <button onclick="calculateSum()">Calculate</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculateSum() {
+            let n = parseInt(document.getElementById("num").value);
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                if (i % 2 == 0) {
+                    sum = sum + i;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Sum of even numbers from 1 to " + n + " is: " + sum;
+        }
+    </script>
+
+</body>
+</html>
